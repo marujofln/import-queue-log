@@ -143,7 +143,7 @@ sub import_data {
       $dbh->do($sql);
     }
   }
-  $dbh->disconnect();
+  $dbh->disconnect() if (!$dry_run);
 
 }
 
