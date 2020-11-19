@@ -31,7 +31,6 @@ GetOptions(
   'db-type=s'      => \(my $db_type = "mysql"),
   'db-host=s'      => \(my $db_host = "127.0.0.1"),
   'db-user=s'      => \(my $db_user_name = 'root'),
-  'no-db-password' => \my $no_db_password,
   'db-password=s'  => \(my $db_password = ''),
   'db-database=s'  => \(my $db_database = 'asteriskcdrdb'),
   'db-table=s'     => \(my $db_table = 'queue_log'),
