@@ -81,11 +81,11 @@ if ($dry_run){
 }
 
 if ($date_start){
-  $date_start = Time::Piece->strptime($date_start, '%F-%T');
+  $date_start = Time::Piece->strptime($date_start, '%Y-%m-%d-%H:%M:%S');
 }
 
 if ($date_end){
-  $date_end = Time::Piece->strptime($date_end, '%F-%T');
+  $date_end = Time::Piece->strptime($date_end, '%Y-%m-%d-%H:%M:%S');
 }
 
 sub import_data {
