@@ -94,12 +94,11 @@ sub import_data {
 
   open(FH, "< $filename")  or die "Can't open queue_log file: $filename $!\n";
 
-  while (<FH>) {
+  while (defined(my $message = <FH>)) {
     $LINE_NUM++;
-    $message = <FH>;
     say('Processing line ' . $LINE_NUM);
-    next unless defined $message;   # interrupted or nothing logged
     chomp $message;
+    next if $message eq '';   # blank line
 
     # remove chars that will cause DB problems
     $message =~ s/\"\'//g;
