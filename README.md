@@ -13,6 +13,15 @@ Debian/Ubuntu:
 sudo apt install libdbi-perl libdbd-mysql-perl   # or libdbd-pg-perl
 ```
 
+Get the script:
+
+```bash
+git clone https://github.com/marujofln/import-queue-log.git
+cd import-queue-log
+chmod +x import-queuelog.pl
+./import-queuelog.pl --help
+```
+
 ## Target table
 
 Each `queue_log` line (`epoch|callid|queuename|agent|event|data1|...|data5`) is inserted as:
